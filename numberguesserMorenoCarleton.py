@@ -32,10 +32,11 @@ while counter == True:
     
 
     keepPlaying = input("Would you like to guess another number (Y/N)?")
-    if keepPlaying == "N":
+    if keepPlaying == "Y":
+        counter = True
+    elif keepPlaying == "N":
         counter = False  
     else:
-        counter = True
-
+        counter = False
 
 print("Thank you for playing!")
