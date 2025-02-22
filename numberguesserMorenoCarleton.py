@@ -6,24 +6,36 @@
 
 import random
 
-answer = random.randrange(1,11)
+counter = True
 
-guess = int(input("Please guess a number between 1 and 10: "))
+while counter == True:
 
-for i in range(100):
+    answer = random.randrange(1,11)
+
+    guess = int(input("Please guess a number between 1 and 10: "))
+
+    for i in range(100):
         
-if guess == 0:
-    print("Process finished with exit code 0")
-    break
-elif guess == answer:
-        print("Well done, you guessed it!")
-        break
-elif guess > answer:
+        if guess == 0:
+            print("Process finished with exit code 0")
+            break
+        elif guess == answer:
+            print("Well done, you guessed it!")
+            break
+        elif guess > answer:
             print("Lower")
-else:
+        else:
             print("Higher")
 
-    guess = int(input("Please guess again: "))
+        guess = int(input("Please guess again: "))
+
+    
+
+    keepPlaying = input("Would you like to guess another number (Y/N)?")
+    if keepPlaying == "N":
+        counter = False  
+    else:
+        counter = True
 
 
 print("Thank you for playing!")
