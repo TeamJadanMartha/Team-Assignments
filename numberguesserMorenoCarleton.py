@@ -8,7 +8,7 @@ import random
 
 answer = random.randrange(1,11)
 
-guess = int(input("Please guess a number between 1 and 11: "))
+guess = int(input("Please guess a number between 1 and 10: "))
 
 for i in range(100):
         
